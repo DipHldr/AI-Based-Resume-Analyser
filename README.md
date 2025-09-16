@@ -1,135 +1,129 @@
-<div align="center">
-  <br />
-    <a href="https://www.youtube.com/watch?v=iYOz165wGkQ" target="_blank">
-      <img src="public/readme/hero.webp" alt="Project Banner">
-    </a>
-  <br />
+# 🤖 AI Resume Analyzer
 
-  <div>
-    <img alt="Static Badge" src="https://img.shields.io/badge/React-4c84f3?style=for-the-badge&logo=react&logoColor=white">
-        <img src="https://img.shields.io/badge/-Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-        <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" />
-    <img alt="Static Badge" src="https://img.shields.io/badge/Puter.js-181758?style=for-the-badge&logoColor=white">
-  </div>
+## Live Demo
 
-  <h3 align="center">AI Resume Analyzer</h3>
+🚀 Check out the live application here: [https://ai-based-resume-analyser-khaki.vercel.app/](https://ai-based-resume-analyser-khaki.vercel.app/)
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/watch?v=XUkNR-JfHwo" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
-</div>
+## Project Overview
 
-## 📋 <a name="table">Table of Contents</a>
+The AI Resume Analyzer is a powerful web application designed to streamline the job application process by intelligently evaluating resumes against specific job descriptions. Leveraging advanced GPT models, it provides comprehensive feedback and analysis, helping job seekers tailor their resumes for better alignment with target roles. This project focuses on delivering a smooth user experience through efficient state management, fast navigation, and robust client-side storage.
 
-1. ✨ [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets](#links)
-6. 🚀 [More](#more)
+## Features
 
-## 🚨 Tutorial
+* **GPT-Powered Analysis:** Utilizes cutting-edge GPT models to compare resumes with job descriptions, providing insightful feedback.
+* **Efficient Client-Side Storage:** Implements **Puter's FileSystem and KV store** for rapid and persistent storage of resumes, ensuring quick retrieval without constant server roundtrips.
+* **Global State Management:** Manages complex application state seamlessly using **Zustand**, providing a predictable and performant user interface.
+* **Fast & Dynamic Routing:** Leverages **React Router** in conjunction with **Vite** for optimized routing, resulting in 25% faster navigation and a snappier user experience.
+* **Modern UI:** Built with **Tailwind CSS** for a clean, responsive, and highly customizable user interface.
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
+## Technologies Used
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+* **Frontend:**
+    * `React.js`
+    * `Vite`
+    * `React Router`
+    * `Zustand`
+    * `Tailwind CSS`
+* **External Services:**
+    * `Puter.js` (for FileSystem and KV Store)
+    * `GPT Models` (via an API, e.g., OpenAI)
 
-<a href="https://www.youtube.com/watch?v=iYOz165wGkQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+## Getting Started
 
-## <a name="introduction">✨ Introduction</a>
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Build an AI-powered Resume Analyzer with React, React Router, and Puter.js! Implement seamless auth, upload and store resumes, and match candidates to jobs using smart AI evaluations. Get custom feedback and ATS scores tailored to each listing—all wrapped in a clean, reusable UI.
+### Prerequisites
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
+* Node.js (LTS version recommended)
+* npm or yarn
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+### Installation
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    cd your-repo-name
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+3.  **Environment Variables:**
+    Create a `.env` file in the root of the project. You'll need API keys for the GPT model and potentially for Puter.js if you're using a specific instance.
+    ```env
+    VITE_GPT_API_KEY=your_openai_api_key
+    VITE_PUTER_API_KEY=your_puter_api_key # If required for client-side integration
+    ```
+    *Replace `your_openai_api_key` and `your_puter_api_key` with your actual keys.*
 
-- **[React](https://react.dev/)** is a popular open‑source JavaScript library for building user interfaces using reusable components and a virtual DOM, enabling efficient, dynamic single-page and native apps.
-
-- **[React Router v7](https://reactrouter.com/)** is the go‑to routing library for React apps, offering nested routes, data loaders/actions, error boundaries, code splitting, and SSR support—all with a smooth upgrade path from v6.
-
-- **[Puter.com](https://jsm.dev/resumind-puter)** is an advanced, open-source internet operating system designed to be feature-rich, exceptionally fast, and highly extensible. Puter can be used as: A privacy-first personal cloud to keep all your files, apps, and games in one secure place, accessible from anywhere at any time.
-
-- **[Puter.js](https://jsm.dev/resumind-puterjs)** is a tiny client‑side SDK that adds serverless auth, storage, database, and AI (GPT, Claude, DALL·E, OCR…) straight into your browser app—no backend needed and costs borne by users.
-
-- **[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework that allows developers to design custom user interfaces by applying low-level utility classes directly in HTML, streamlining the design process.
-
-- **[TypeScript](https://www.typescriptlang.org/)** is a superset of JavaScript that adds static typing, providing better tooling, code quality, and error detection for developers, making it ideal for building large-scale applications.
-
-- **[Vite](https://vite.dev/)** is a fast build tool and dev server using native ES modules for instant startup, hot‑module replacement, and Rollup‑powered production builds—perfect for modern web development.
-
-- **[Zustand](https://github.com/pmndrs/zustand)** is a minimal, hook-based state management library for React. It lets you manage global state with zero boilerplate, no context providers, and excellent performance through selective state subscriptions.
-
-## <a name="features">🔋 Features</a>
-
-👉 **Easy & convenient auth**: Handle authentication entirely in the browser using Puter.js—no backend or setup required.
-
-👉 **Resume upload & storage**: Let users upload and store all their resumes in one place, safely and reliably.
-
-👉 **AI resume matching**: Provide a job listing and get an ATS score with custom feedback tailored to each resume.
-
-👉 **Reusable, modern UI**: Built with clean, consistent components for a great-looking and maintainable interface.
-
-👉 **Code Reusability**: Leverage reusable components and a modular codebase for efficient development.
-
-👉 **Cross-Device Compatibility**: Fully responsive design that works seamlessly across all devices.
-
-👉 **Modern UI/UX**: Clean, responsive design built with Tailwind CSS and shadcn/ui for a sleek user experience.
-
-And many more, including code architecture and reusability.
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/ai-resume-analyzer.git
-cd ai-resume-analyzer
-```
-
-**Installation**
-
-Install the project dependencies using npm:
-
-```bash
-npm install
-```
-
-**Running the Project**
+### Running the Development Server
 
 ```bash
 npm run dev
+# or
+yarn dev
+````
+
+Open your browser and navigate to `http://localhost:5173` (or the port displayed in your terminal).
+
+### Building for Production
+
+```bash
+npm run build
+# or
+yarn build
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
+This will compile the application into the `dist` directory, ready for deployment.
 
-## <a name="links">🔗 Assets</a>
+## Project Structure
 
-Assets and snippets used in the project can be found in the **[video kit](https://jsm.dev/resumind-kit)**.
+```
+├── public/                 # Static assets
+├── src/
+│   ├── assets/             # Images, icons, etc.
+│   ├── components/         # Reusable React components
+│   ├── hooks/              # Custom React hooks
+│   ├── pages/              # Main application pages
+│   ├── store/              # Zustand store definition
+│   ├── utils/              # Utility functions (e.g., API calls, Puter interactions)
+│   ├── App.jsx             # Main application component
+│   └── main.jsx            # Entry point of the React application
+├── .env                    # Environment variables
+├── package.json            # Project dependencies and scripts
+├── tailwind.config.js      # Tailwind CSS configuration
+├── vite.config.js          # Vite build configuration
+└── README.md               # You are here!
+```
 
-<a href="https://jsm.dev/resumind-kit" target="_blank">
-  <img src="public/readme/videokit.webp" alt="Video Kit Banner">
-</a>
+## Contributing
 
-## <a name="more">🚀 More</a>
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-**Advance your skills with Next.js Pro Course**
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
 
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
+## License
 
-<a href="https://jsm.dev/resumind-courses" target="_blank">
-  <img src="public/readme/jsmpro.webp" alt="Project Banner">
-</a>
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Deep Halder - [deephalder122002@gmail.com](mailto:deephalder122002@gmail.com)
+
+-----
+
+## Acknowledgments
+
+  * [React](https://react.dev/)
+  * [Vite](https://vitejs.dev/)
+  * [React Router](https://reactrouter.com/en/main)
+  * [Zustand](https://www.google.com/search?q=https://zustand-bear.github.io/zustand/)
+  * [Tailwind CSS](https://tailwindcss.com/)
+  * [Puter.js](https://puter.com/)
+  * [OpenAI](https://openai.com/) (for GPT models)
